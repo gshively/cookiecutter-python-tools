@@ -43,6 +43,14 @@ def task_pytest() -> Dict[str, Any]:
 
 
 def task_coverage() -> Dict[str, Any]:
+    cmd = f"pytest --cov={SRC_DIR} "
+    return {
+        "actions": (cmd,),
+        "file_dep": SRC + TESTS
+    }
+
+
+def task_coverage_report() -> Dict[str, Any]:
     coverage_dir = "coverage"
     cmd = f"pytest --cov={SRC_DIR} --cov-report html:{coverage_dir}"
 

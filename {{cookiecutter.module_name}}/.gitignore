@@ -1,0 +1,7 @@
+.venv
+venv
+coverage
+.coverage
+.doit.db
+.mypy_cache
+.pytest_cache
